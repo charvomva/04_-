@@ -68,7 +68,7 @@ header {background: #666; color:#fff;  }
         .allBtn{float:left; display:block;line-height:50px;}
         .sign {line-height: 50px;}
         #contents > div {width:100%; height:200px; float:none; }
-        .footer_in {text-align: center;}
+        .footer_in {text-align: center; width:300px;}
 
         button {display:block; position:absolute; top:20px; right:20px;}
     }
