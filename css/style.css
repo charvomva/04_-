@@ -1,0 +1,74 @@
+@charset "UTF-8";
+
+
+a {color:inherit;}
+
+body { font-family:Arial, Helvetica, sans-serif; ;}
+ul:after, .header_in:after, #contents:after {display:block; content:''; clear:both; }
+
+header {background: #666; color:#fff;  }
+    .header_in {position:relative; width:1240px; height:100px; margin:auto; }
+    h1 {float:left; line-height:100px;}   
+
+    nav {position:absolute; width:600px;  left:50%; margin-left:-250px; }
+    nav ul {}
+    nav li {float:left;}
+    nav a {display:block; line-height: 100px; margin:0 15px; font-size: 18px;}
+
+    .allBtn {display:none;}
+    .sign{float:right; line-height:100px;}
+
+
+    #visual {height:500px; margin:auto; background:#aaaa; width:1200px;}
+
+
+    #contents {width:1240px; margin:auto; }
+    #contents > div {width:25%; height:200px; float:left;}
+        .con1 {background: coral;}
+        .con2 {background: lightcyan;}
+        .con3 {background: lightpink;}
+        .con4 {background: tomato;}
+#footer {background: #aaa;}
+    .footer_in {width:1240px; height:50px; margin:auto; border:3px solid orange; padding:20px; text-align: right; }
+
+
+    /* 1200px보다 작을 때   */
+
+    @media ( max-width:1240px ) { 
+        .header_in {width:100%; }
+        #visual {width:100%; height:400px;}
+        #contents {width:100%;}
+        
+        #contents > div {width:50%; height:300px; }
+        button {display:none;} 
+        .footer_in {text-align: center;}
+
+    }
+
+      /* 960px보다 작을 때   */
+
+    @media( max-width:960px) { 
+        h1 {font-size: 20px;}
+        nav {margin-left:-150px}
+        nav a {margin:0 10px; font-size: 14px;}  
+        .sign span {display:none}
+    }
+
+    /* 720px 보다 작을 떄*/
+
+    @media(max-width:720px){
+        .header_in {position:static; height:50px}
+        h1 {position:absolute; left:50%; transform: translate(-50%); float:none; line-height:50px;}
+        nav {position:fixed; padding:50px 0 0 20px ; width:300px; left:-100%; bottom:0; top:0; margin-left:0; background: #FFF;}
+
+        nav li {float:none;}
+
+        nav a  {line-height: 40px; margin:0; font-size: 16px; color:#111;}
+
+        .allBtn{float:left; display:block;line-height:50px;}
+        .sign {line-height: 50px;}
+        #contents > div {width:100%; height:200px; float:none; }
+        .footer_in {text-align: center;}
+
+        button {display:block; position:absolute; top:20px; right:20px;}
+    }
